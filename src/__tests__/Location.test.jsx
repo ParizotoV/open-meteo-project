@@ -5,7 +5,7 @@ import { mockWeather }from '../utils/util'
 
 
 // Mock useRouter:
-jest.mock("next/navigation", () => ({
+jest.mock('next/navigation', () => ({
   useRouter() {
     return {
       prefetch: () => null

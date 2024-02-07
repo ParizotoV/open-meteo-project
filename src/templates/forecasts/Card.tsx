@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState } from "react";
-import { Weather } from "@/models/Weather";
+import React, { useEffect, useState } from 'react';
+import { Weather } from '@/models/Weather';
 
-import { Menu, MenuItem } from "@szhsin/react-menu";
+import { Menu, MenuItem } from '@szhsin/react-menu';
 
-import InfosWeather from "./components/InfosWeather";
-import Location from "./components/Location";
-import { MoreHorizontal } from "lucide-react";
+import InfosWeather from './components/InfosWeather';
+import Location from './components/Location';
+import { MoreHorizontal } from 'lucide-react';
 
-import { useRouter } from "next/navigation";
-import { useGlobalState } from "@/core/GlobalState";
-import { getCoordenates, getDetailsLocation } from "@/api/fetchWeatherApi";
+import { useRouter } from 'next/navigation';
+import { useGlobalState } from '@/core/GlobalState';
+import { getCoordenates, getDetailsLocation } from '@/api/fetchWeatherApi';
 
-import { toast } from "react-toastify";
-import { GeoReverse } from "@/models/GeoReverse";
-import Loader from "@/components/Loader/Loader";
+import { toast } from 'react-toastify';
+import { GeoReverse } from '@/models/GeoReverse';
+import Loader from '@/components/Loader/Loader';
 
 interface CardProps {
   weather: Weather;
@@ -48,11 +48,11 @@ const Card: React.FC<CardProps> = ({ weather }) => {
         geoCode: coordenate,
       };
 
-      toast.success("Updated successfully");
+      toast.success('Updated successfully');
 
       updateWeather(weatherNew);
     } catch (err) {
-      toast.error("Error when updating");
+      toast.error('Error when updating');
     } finally {
       setLoading(false);
     }
@@ -61,11 +61,11 @@ const Card: React.FC<CardProps> = ({ weather }) => {
   const deleteWeather = () => {
     removeWeather(weather.uuid);
 
-    toast.success("Successfully deleted");
+    toast.success('Successfully deleted');
   };
 
   useEffect(() => {
-    window.localStorage.setItem("weathers", JSON.stringify(weathers));
+    window.localStorage.setItem('weathers', JSON.stringify(weathers));
   }, [weathers]);
 
   if (loading)
@@ -74,8 +74,8 @@ const Card: React.FC<CardProps> = ({ weather }) => {
         role="feed"
         className={`font-edited flex flex-col rounded rounded-[22px] p-2 text-white p-[13px] relative box-border justify-between h-[180px] ${
           weather.current.temperature_2m > 19
-            ? "bg-gradient-to-tl from-[#00AFFB] to-[#9800E0]"
-            : "bg-gradient-to-tl from-[#9F69FF] to-[#1A1572] to-[#0B0B0B]"
+            ? 'bg-gradient-to-tl from-[#00AFFB] to-[#9800E0]'
+            : 'bg-gradient-to-tl from-[#9F69FF] to-[#1A1572] to-[#0B0B0B]'
         } `}
       >
         <Loader />
@@ -117,8 +117,8 @@ const Card: React.FC<CardProps> = ({ weather }) => {
       role="feed"
       className={`font-edited flex flex-col rounded rounded-[22px] p-2 text-white p-[13px] relative box-border justify-between h-[180px] ${
         weather.current.temperature_2m > 19
-          ? "bg-gradient-to-tl from-[#00AFFB] to-[#9800E0]"
-          : "bg-gradient-to-tl from-[#9F69FF] to-[#1A1572] to-[#0B0B0B]"
+          ? 'bg-gradient-to-tl from-[#00AFFB] to-[#9800E0]'
+          : 'bg-gradient-to-tl from-[#9F69FF] to-[#1A1572] to-[#0B0B0B]'
       } `}
     >
       <InfosWeather weather={weather} />

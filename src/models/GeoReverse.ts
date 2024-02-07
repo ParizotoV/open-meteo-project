@@ -27,7 +27,7 @@ export interface Addressparts {
   state: {
     _text: string;
   };
-  "ISO3166-2-lvl4": {
+  'ISO3166-2-lvl4': {
     _text: string;
   };
   region: {

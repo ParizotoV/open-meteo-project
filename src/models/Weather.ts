@@ -1,4 +1,4 @@
-import { GeoReverse } from "./GeoReverse";
+import { GeoReverse } from './GeoReverse';
 
 interface Hourly {
   time: Array<string>;

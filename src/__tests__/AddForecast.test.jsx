@@ -4,7 +4,7 @@ import AddForecast from '../app/add-forecast/page'
 import FormAddForecast from '../templates/add-forecast/FormAddForecast'
 
 // Mock useRouter:
-jest.mock("next/navigation", () => ({
+jest.mock('next/navigation', () => ({
   useRouter() {
     return {
       prefetch: () => null
@@ -19,7 +19,7 @@ beforeEach(() => {
 describe('AddForecast Page', () => {
   it('renders header', () => {
     render(<AddForecast />)
-    const title = screen.getByText("ForecastWeather")
+    const title = screen.getByText('ForecastWeather')
     const buttonBack = screen.getByTestId('back-svg')
     const buttonWeather = screen.getByTestId('button-weather')
 

@@ -1,20 +1,20 @@
-"use client";
-import React, { useEffect } from "react";
+'use client';
+import React, { useEffect } from 'react';
 
-import { useGlobalState } from "@/core/GlobalState";
-import Header from "@/components/Header/Header";
-import { useRouter } from "next/navigation";
+import { useGlobalState } from '@/core/GlobalState';
+import Header from '@/components/Header/Header';
+import { useRouter } from 'next/navigation';
 
-import { Weather } from "@/models/Weather";
-import Card from "@/templates/forecasts/Card";
-import ButtonAdd from "@/templates/forecasts/components/ButtonAdd";
+import { Weather } from '@/models/Weather';
+import Card from '@/templates/forecasts/Card';
+import ButtonAdd from '@/templates/forecasts/components/ButtonAdd';
 
 const Forecasts: React.FC = () => {
   const { push } = useRouter();
   const { weathers, initValues } = useGlobalState();
 
   useEffect(() => {
-    const localWeathers = window.localStorage.getItem("weathers");
+    const localWeathers = window.localStorage.getItem('weathers');
 
     if (localWeathers) {
       const parsedWeathers: Array<Weather> = JSON.parse(localWeathers);
@@ -31,7 +31,7 @@ const Forecasts: React.FC = () => {
         <Header />
 
         <div className="flex flex-col gap-5">
-          <ButtonAdd onClick={() => push("/add-forecast")} />
+          <ButtonAdd onClick={() => push('/add-forecast')} />
 
           <h3 className="text-[#B2A8EE]">My widgets</h3>
           <div id="cards">

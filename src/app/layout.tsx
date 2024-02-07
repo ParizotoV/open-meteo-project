@@ -1,24 +1,24 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import "react-toastify/dist/ReactToastify.css";
-import { Poppins } from "next/font/google";
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
+import './globals.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { Poppins } from 'next/font/google';
 
-import { ToastContainer } from "react-toastify";
+import { ToastContainer } from 'react-toastify';
 
 const Siffon = localFont({
-  src: "../../public/fonts/SIFONN-BASIC.otf",
-  variable: "--font-siffon-basic",
+  src: '../../public/fonts/SIFONN-BASIC.otf',
+  variable: '--font-siffon-basic',
 });
 
 const poppins = Poppins({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-poppins",
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-poppins',
 });
 
 export const metadata: Metadata = {
-  title: "Meteo API",
+  title: 'Forecast Weather',
 };
 
 export default function RootLayout({

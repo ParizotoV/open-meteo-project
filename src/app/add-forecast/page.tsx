@@ -1,10 +1,10 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 
-import Header from "@/components/Header/Header";
+import Header from '@/components/Header/Header';
 
-import { getDetailsLocation } from "@/api/fetchWeatherApi";
-import FormAddForecast from "@/templates/add-forecast/FormAddForecast";
+import { getDetailsLocation } from '@/api/fetchWeatherApi';
+import FormAddForecast from '@/templates/add-forecast/FormAddForecast';
 
 const AddForecast: React.FC = () => {
   return (

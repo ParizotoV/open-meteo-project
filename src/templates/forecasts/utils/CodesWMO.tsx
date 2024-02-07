@@ -8,7 +8,7 @@ import {
   CloudSun,
   Waves,
   Wind,
-} from "lucide-react";
+} from 'lucide-react';
 
 export const IconsWMO: { [key: number]: any } = {
   0: <CloudSun width={100} height={100} />,

@@ -1,7 +1,7 @@
-import { Weather } from "@/models/Weather";
-import { create } from "zustand";
+import { Weather } from '@/models/Weather';
+import { create } from 'zustand';
 
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid';
 
 interface GlobalStateParams {
   weathers: Weather[];

@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react'
 import Loader from '../components/Loader/Loader'
 
 // Mock useRouter:
-jest.mock("next/navigation", () => ({
+jest.mock('next/navigation', () => ({
   useRouter() {
     return {
       prefetch: () => null
@@ -18,7 +18,7 @@ beforeEach(() => {
 describe('Loader', () => {
   it('renders loader', async () => {
     render(<Loader />)
-    const subtitle = screen.getByText("Loading...")
+    const subtitle = screen.getByText('Loading...')
 
     const svgConfig = screen.getByTestId('loader-svg')
 

@@ -1,5 +1,5 @@
-import { PlusIcon } from "lucide-react";
-import React from "react";
+import { PlusIcon } from 'lucide-react';
+import React from 'react';
 
 const ButtonAdd: React.FC<
   React.DetailedHTMLProps<
@@ -21,7 +21,7 @@ const ButtonAdd: React.FC<
           colorInterpolation={50}
           color="#ea580c"
           strokeWidth={2.5}
-          style={{ position: "absolute", top: 7, right: 7, zIndex: 20 }}
+          style={{ position: 'absolute', top: 7, right: 7, zIndex: 20 }}
         />
       </div>
       <div className="z-20 absolute bg-gradient-to-br from-[#fff] to-[transparent] rounded rounded-full opacity-20 w-[103px] h-[103px] top-[-20px] left-[12px]" />

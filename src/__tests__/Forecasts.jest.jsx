@@ -4,7 +4,7 @@ import Forecasts from '../app/forecasts/page'
 import { mockWeather }from '../utils/util'
 
 // Mock useRouter:
-jest.mock("next/navigation", () => ({
+jest.mock('next/navigation', () => ({
   useRouter() {
     return {
       prefetch: () => null
@@ -19,7 +19,7 @@ beforeEach(() => {
 describe('Forecasts Page', () => {
   it('renders header', async () => {
     render(<Forecasts />)
-    const title = screen.getByText("ForecastWeather")
+    const title = screen.getByText('ForecastWeather')
 
     const svgConfig = screen.getByTestId('config-svg')
     const svgBack  = screen.queryByTestId('back-svg')
