@@ -1,11 +1,9 @@
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import Infos from '../templates/details/Infos'
-import { mockWeather }from '../utils/util'
-
 
 // Mock useRouter:
-jest.mock("next/navigation", () => ({
+jest.mock('next/navigation', () => ({
   useRouter() {
     return {
       prefetch: () => null

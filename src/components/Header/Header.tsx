@@ -13,7 +13,6 @@ const Header: React.FC<HeaderProps> = ({ buttonBack = false }) => {
   const { push } = useRouter()
   return (
     <header className='flex justify-between w-full items-center'>
-      
       <div
         className='bg-[#292248] rounded rounded-full w-[50px] h-[50px] flex items-center justify-center'
         onClick={() => buttonBack && push('/forecasts')}
