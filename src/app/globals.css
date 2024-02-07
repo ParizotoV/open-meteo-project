@@ -18,12 +18,40 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+.my-menuitem {
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+
+.my-menuitem:focus{     
+  outline: none; 
+}
+
+.my-menuitem:hover{  
+  background-color: rgba(178,168,238, 0.3); 
+}
+
+.szh-menu {
+  display: flex;
+  flex-direction: column;
+  background: #231D49;
+  gap: 2px;
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #B2A8EE;
+  border-radius: 20px;
 }
 
 @layer utilities {
