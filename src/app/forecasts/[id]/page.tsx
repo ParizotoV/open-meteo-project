@@ -35,7 +35,7 @@ const Details: React.FC = () => {
         }
       }
     } else {
-      const weather = weathers.find((weather) => weather.uuid === location.pathname.split('/')[2])
+      const weather = weathers.find((weather) => weather.uuid === window.location.pathname.split('/')[2])
       if (weather) setWeather(weather)
       window.localStorage.setItem('weathers', JSON.stringify(weathers))
     }
@@ -99,7 +99,7 @@ const Details: React.FC = () => {
           <h2 className='text-[#B2A8EE] font-sans'>
             Details {addressparts?.city?._text}/
             {addressparts?.['ISO3166-2-lvl4'] &&
-              addressparts?.['ISO3166-2-lvl4']?._text.split('-')[1]}
+              addressparts?.['ISO3166-2-lvl4']?._text?.split('-')[1]}
           </h2>
           <div className='flex items-center items-center justify-center cursor-pointer rounded rounded-full bg-gradient-to-tl from-[#322C54] to-[#231D49] w-[22px] h-[22px]'>
             <Menu

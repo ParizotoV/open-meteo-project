@@ -29,7 +29,7 @@ const Location: React.FC<LocationProps> = ({ weather }) => {
       <span className={'text-xs'}>
         {findCity(addressparts)}/
         {addressparts?.['ISO3166-2-lvl4'] &&
-          addressparts['ISO3166-2-lvl4']._text.split('-')[1]}
+          addressparts['ISO3166-2-lvl4']?._text?.split('-')[1]}
       </span>
     </div>
   );

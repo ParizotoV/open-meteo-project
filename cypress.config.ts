@@ -10,6 +10,6 @@ export default defineConfig({
       config.env = process.env
 
       return config
-    }
-  }
+    },
+  },
 })

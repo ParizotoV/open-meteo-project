@@ -525,6 +525,12 @@ export const mockWeather: Weather = {
   geoCode: {
     reversegeocode: {
       addressparts: {
+        city_district: {
+          _text: undefined,
+        },
+        town: {
+          _text: undefined,
+        },
         house_number: {
           _text: '1115',
         },
