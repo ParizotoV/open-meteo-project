@@ -14,6 +14,11 @@
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "src/**/*.(ts|tsx|js|jsx|json)": [
+      "yarn lint --fix"
+    ]
+  },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@headlessui/tailwindcss": "^0.2.0",
